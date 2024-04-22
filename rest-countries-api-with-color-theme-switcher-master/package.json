@@ -4,12 +4,17 @@
   "description": "![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "lit-html": "^3.1.0",
     "page": "^1.11.6"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.2.5"
   }
 }

@@ -1,14 +1,15 @@
 import page from "//unpkg.com/page/page.mjs";
 import { render } from "https://unpkg.com/lit-html/lit-html.js";
-import { layoutTemplate } from "./layout.js";
-import { homePage } from "./home.js";
-import { detailsPage } from "./details.js";
+
+import { fetchDetails } from "./services/fetchDetails";
+import { layoutTemplate } from "./components/layout.template";
+import { homePage } from "./services/homePage";
 
 const root = document.body;
 page(decorateContext);
 page("index.html", "/");
-page("/", homePage);
-page("/details/:code", detailsPage);
+page("/", homePage());
+page("/details/:code", fetchDetails());
 
 page.start();
 
